@@ -6,7 +6,7 @@ func longestValidParentheses(s string) int {
 	stack := make([]int, 0)
 	flagMap := make([]int, len(s))
 
-	for i:=0;i < len(s);i++ {
+	for i := 0; i < len(s); i++ {
 		if s[i] == ')' {
 			if len(stack) == 0 || s[stack[len(stack)-1]] != '(' {
 				flagMap[i] = 1
@@ -27,7 +27,7 @@ func longestValidParentheses(s string) int {
 	maxVal := 0
 	count := 0
 	fmt.Println(flagMap)
-	for i:=0;i < len(flagMap);i++ {
+	for i := 0; i < len(flagMap); i++ {
 		if flagMap[i] == 0 {
 			count++
 		} else {
@@ -36,11 +36,4 @@ func longestValidParentheses(s string) int {
 		}
 	}
 	return max(count, maxVal)
-}
-
-func max(a,b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }

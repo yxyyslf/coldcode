@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditor">
+    <option name="projectConfig">
+      <map>
+        <entry key="$USER_HOME$/Documents/coldcode/leetcode/editor/en/[1143]Longest Common Subsequence.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$USER_HOME$/Documents/coldcode/leetcode/editor/en/doc/content/[1143]Longest Common Subsequence.md" />
+              <option name="frontendQuestionId" value="leetcode.com1143" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$USER_HOME$/Documents/coldcode/leetcode/editor/en/[1143]Longest Common Subsequence.go" />
+              <option name="titleSlug" value="longest-common-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

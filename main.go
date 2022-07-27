@@ -34,3 +34,10 @@ func RemoveDuplicateInt(intSlice []uint32) []uint32 {
 	}
 	return list
 }
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
