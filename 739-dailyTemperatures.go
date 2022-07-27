@@ -1,4 +1,5 @@
 package main
+
 //Given an array of integers temperatures represents the daily temperatures,
 //return an array answer such that answer[i] is the number of days you have to wait
 //after the iᵗʰ day to get a warmer temperature. If there is no future day for
@@ -26,8 +27,6 @@ package main
 //
 //
 // Related Topics Array Stack Monotonic Stack 👍 7664 👎 169
-
-package main
 //leetcode submit region begin(Prohibit modification and deletion)
 func dailyTemperatures(temperatures []int) []int {
 	result := make([]int, len(temperatures))
@@ -47,4 +46,5 @@ func dailyTemperatures(temperatures []int) []int {
 
 	return result
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
