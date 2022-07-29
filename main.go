@@ -9,6 +9,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func main() {
 	//items := make([]uint32, 2)
 	//items[0] = 100
