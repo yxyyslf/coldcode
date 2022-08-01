@@ -24,8 +24,8 @@ func main() {
 	//
 	//items = append(items, 10)
 	//fmt.Println(items)
-	a := []int{1, 1, 1, 1, 1}
-	r := findTargetSumWays(a, 3)
+	//a := []int{1, 1, 1, 1, 1}
+	r := findAnagrams("abab", "ab")
 	fmt.Println(r)
 }
 
