@@ -24,9 +24,9 @@ func main() {
 	//
 	//items = append(items, 10)
 	//fmt.Println(items)
-	a := []uint32{1, 2, 3, 4, 5, 5, 5, 5}
-	a = RemoveDuplicateInt(a)
-	fmt.Println(a)
+	a := []int{1, 1, 1, 1, 1}
+	r := findTargetSumWays(a, 3)
+	fmt.Println(r)
 }
 
 func RemoveDuplicateInt(intSlice []uint32) []uint32 {
