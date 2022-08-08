@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -24,9 +20,27 @@ func main() {
 	//
 	//items = append(items, 10)
 	//fmt.Println(items)
-	a := []int{100}
-	r := canPartition(a)
-	fmt.Println(r)
+	head1 := &ListNode{
+		Val: 4,
+	}
+	head2 := &ListNode{
+		Val: 2,
+	}
+	head3 := &ListNode{
+		Val: 1,
+	}
+	head4 := &ListNode{
+		Val: 3,
+	}
+	head1.Next = head2
+	head2.Next = head3
+	head3.Next = head4
+
+	r := sortList(head1)
+	for r != nil {
+		//fmt.Println(r.Val)
+		r = r.Next
+	}
 }
 
 func RemoveDuplicateInt(intSlice []uint32) []uint32 {
