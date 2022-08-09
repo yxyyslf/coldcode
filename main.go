@@ -11,6 +11,12 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+type RandomNode struct {
+	Val    int
+	Next   *RandomNode
+	Random *RandomNode
+}
+
 func main() {
 	//items := make([]uint32, 2)
 	//items[0] = 100
