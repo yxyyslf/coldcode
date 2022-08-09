@@ -59,7 +59,7 @@ func isValidBSTraverse(root *TreeNode, minVal, maxVal int) bool {
 	if root == nil {
 		return true
 	}
-	if root.Val > maxVal || root.Val < minVal {
+	if root.Val >= maxVal || root.Val <= minVal {
 		return false
 	}
 	return isValidBSTraverse(root.Left, minVal, root.Val) && isValidBSTraverse(root.Right, root.Val, maxVal)
