@@ -41,7 +41,7 @@
 package main
 
 //leetcode submit region begin(Prohibit modification and deletion)
-func searchMatrix(matrix [][]int, target int) bool {
+func searchMatrix2(matrix [][]int, target int) bool {
 	i := len(matrix) - 1
 	j := 0
 	for i >= 0 && j < len(matrix[0]) {
