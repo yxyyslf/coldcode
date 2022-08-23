@@ -18,35 +18,44 @@ type RandomNode struct {
 }
 
 func main() {
-	//items := make([]uint32, 2)
-	//items[0] = 100
-	//items[1] = 200
+	//var pWord, nWord string
+	//var m, n, k int
 	//
-	//fmt.Println(items)
+	//reader := bufio.NewReader(os.Stdin) // 标准输入输出
+	//pWord, _ = reader.ReadString('\n')  // 回车结束
 	//
-	//items = append(items, 10)
-	//fmt.Println(items)
-	head1 := &ListNode{
-		Val: 4,
-	}
-	head2 := &ListNode{
-		Val: 2,
-	}
-	head3 := &ListNode{
-		Val: 1,
-	}
-	head4 := &ListNode{
-		Val: 3,
-	}
-	head1.Next = head2
-	head2.Next = head3
-	head3.Next = head4
+	//reader = bufio.NewReader(os.Stdin) // 标准输入输出
+	//nWord, _ = reader.ReadString('\n') // 回车结束
+	//
+	//fmt.Scan(&m)
+	//hotels := make([]int, m)
+	//for i := 0; i < m; i++ {
+	//	var id int
+	//	fmt.Scan(&id)
+	//	hotels[i] = id
+	//}
+	//fmt.Scan(&n)
+	//reviews := make([]string, n)
+	//for i := 0; i < n; i++ {
+	//	var review string
+	//	reader = bufio.NewReader(os.Stdin)  // 标准输入输出
+	//	review, _ = reader.ReadString('\n') // 回车结束
+	//	reviews[i] = review
+	//}
+	//
+	//fmt.Scan(&k)
+	//pWord := "breakfast beach city center location metro view staff price"
+	//nWord := "not"
+	//hotels := []int{1, 2, 1, 1, 3}
+	//reviews := []string{"This hotel has a nice view of the city center. The location is perfect.",
+	//	"The breakfast is ok. Regarding location, " +
+	//		"it is quite far from the city center but price is cheap so it is worth it.",
+	//	"Location is excellent, 5 minutes from the city center. There is also a metro station very close to the hotel.",
+	//	"They said I couldn't take my dog and there were other guests with dogs! That is not fair.",
+	//	"Very friendly staff and a good cost-benefit ratio. Its location is a bit far from the city center.",
+	//}
+	//k := 2
 
-	r := sortList(head1)
-	for r != nil {
-		//fmt.Println(r.Val)
-		r = r.Next
-	}
 }
 
 func RemoveDuplicateInt(intSlice []uint32) []uint32 {
