@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -55,6 +59,10 @@ func main() {
 	//	"Very friendly staff and a good cost-benefit ratio. Its location is a bit far from the city center.",
 	//}
 	//k := 2
+	//var date uint64
+	m := make(map[int]int, 0)
+	m[10]++
+	fmt.Println(m)
 
 }
 
