@@ -1,6 +1,7 @@
 package main
 
 import (
+	"awesomeProject/booking"
 	"fmt"
 )
 
@@ -48,21 +49,19 @@ func main() {
 	//}
 	//
 	//fmt.Scan(&k)
-	//pWord := "breakfast beach city center location metro view staff price"
+	//pWord := "breakfast beach citycenter location metro view staff price"
 	//nWord := "not"
-	//hotels := []int{1, 2, 1, 1, 3}
-	//reviews := []string{"This hotel has a nice view of the city center. The location is perfect.",
-	//	"The breakfast is ok. Regarding location, " +
-	//		"it is quite far from the city center but price is cheap so it is worth it.",
-	//	"Location is excellent, 5 minutes from the city center. There is also a metro station very close to the hotel.",
-	//	"They said I couldn't take my dog and there were other guests with dogs! That is not fair.",
-	//	"Very friendly staff and a good cost-benefit ratio. Its location is a bit far from the city center.",
+	//hotels := []int32{1, 2, 1, 1, 2}
+	//reviews := []string{"This hotel has a nice view of the citycenter. The location is perfect.",
+	//	"The breakfast is ok. Regarding location, it is quite far from citycenter but price is cheap so it is worth.",
+	//	"Location is excellent, 5 minutes from citycenter. There is also a metro station very close to the hotel.",
+	//	"Good price but I couldn't take my dog and there were other guests with dogs!",
+	//	"Very friendly staff and good cost-benefit ratio. Its location is a bit far from citycenter.",
 	//}
-	//k := 2
-	//var date uint64
-	m := make(map[int]int, 0)
-	m[10]++
-	fmt.Println(m)
+	//k := int32(2)
+	//ans := booking.AwardTopKHotels(pWord, nWord, hotels, reviews, k)
+	arr := []int32{1, 2, 3, 4, 5}
+	fmt.Println(booking.BeautifulSubarrays1(arr, 2))
 
 }
 

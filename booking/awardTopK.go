@@ -19,7 +19,6 @@ Very friendly staff and a good cost-benefit ratio. Its location is a bit far fro
 */
 import (
 	"container/heap"
-	"fmt"
 	"strings"
 )
 
@@ -36,6 +35,9 @@ func (h HotelHeap) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 func (h HotelHeap) Less(i, j int) bool {
+	if h[i].Score == h[j].Score {
+		return h[i].ID > h[i].ID
+	}
 	return h[i].Score < h[j].Score
 }
 func (h *HotelHeap) Push(val interface{}) {
@@ -46,9 +48,10 @@ func (h *HotelHeap) Pop() interface{} {
 	*h = (*h)[:len(*h)-1]
 	return val
 }
-func AwardTopK(positiveWord, negativeWord string, hotels []int, reviews []string, k int) []int {
-	pWords := strings.Split(positiveWord, " ")
-	nWords := strings.Split(negativeWord, " ")
+
+func AwardTopKHotels(positiveKeywords, negativeKeywords string, hotelIds []int32, reviews []string, k int32) []int32 {
+	pWords := strings.Split(positiveKeywords, " ")
+	nWords := strings.Split(negativeKeywords, " ")
 	pWordMap := make(map[string]bool, 0)
 	nWordsMap := make(map[string]bool, 0)
 	for _, word := range pWords {
@@ -59,8 +62,8 @@ func AwardTopK(positiveWord, negativeWord string, hotels []int, reviews []string
 	}
 
 	scoreMap := make(map[int]int, 0)
-	for i := range hotels {
-		scoreMap[hotels[i]] = 0
+	for i := range hotelIds {
+		scoreMap[int(hotelIds[i])] = 0
 	}
 
 	for i := range reviews {
@@ -72,6 +75,7 @@ func AwardTopK(positiveWord, negativeWord string, hotels []int, reviews []string
 			if word[len(word)-1] == '.' || word[len(word)-1] == ',' {
 				word = word[:len(word)-1]
 			}
+			word = strings.ToLower(word)
 			if _, ok := pWordMap[word]; ok {
 				posCount++
 			}
@@ -79,10 +83,8 @@ func AwardTopK(positiveWord, negativeWord string, hotels []int, reviews []string
 				negCount++
 			}
 		}
-
-		scoreMap[hotels[i]] += posCount*3 - negCount
+		scoreMap[int(hotelIds[i])] += posCount*3 - negCount
 	}
-	fmt.Println(scoreMap)
 	h := &HotelHeap{}
 	for i, v := range scoreMap {
 		hotel := Hotel{
@@ -90,15 +92,20 @@ func AwardTopK(positiveWord, negativeWord string, hotels []int, reviews []string
 			Score: v,
 		}
 		heap.Push(h, hotel)
-		if h.Len() > k {
+		if h.Len() > int(k) {
 			heap.Pop(h)
 		}
 	}
-
-	result := make([]int, 0)
+	result := make([]int32, 0)
 	for h.Len() > 0 {
 		data := heap.Pop(h)
-		result = append(result, data.(Hotel).ID)
+		result = append(result, int32(data.(Hotel).ID))
+	}
+	l, r := 0, len(result)-1
+	for l < r {
+		result[l], result[r] = result[r], result[l]
+		l++
+		r--
 	}
 	return result
 }
