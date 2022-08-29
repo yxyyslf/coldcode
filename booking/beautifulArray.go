@@ -1,6 +1,8 @@
 package booking
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func BeautifulSubarrays1(arr []int32, numOdds int32) int64 {
 	// Write your code here
