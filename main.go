@@ -60,8 +60,8 @@ func main() {
 	//}
 	//k := int32(2)
 	//ans := booking.AwardTopKHotels(pWord, nWord, hotels, reviews, k)
-	arr := []int32{1, 2, 3, 4, 5}
-	fmt.Println(booking.BeautifulSubarrays1(arr, 2))
+
+	fmt.Println(booking.KnightMove(5, 5))
 
 }
 
