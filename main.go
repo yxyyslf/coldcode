@@ -54,7 +54,7 @@ func main() {
 	//hotels := []int32{1, 2, 1, 1, 2}
 	//reviews := []string{"This hotel has a nice view of the citycenter. The location is perfect.",
 	//	"The breakfast is ok. Regarding location, it is quite far from citycenter but price is cheap so it is worth.",
-	//	"Location is excellent, 5 minutes from citycenter. There is also a metro station very close to the hotel.",
+	//	"Loc is excellent, 5 minutes from citycenter. There is also a metro station very close to the hotel.",
 	//	"Good price but I couldn't take my dog and there were other guests with dogs!",
 	//	"Very friendly staff and good cost-benefit ratio. Its location is a bit far from citycenter.",
 	//}
@@ -62,7 +62,6 @@ func main() {
 	//ans := booking.AwardTopKHotels(pWord, nWord, hotels, reviews, k)
 
 	fmt.Println(booking.KnightMove(5, 5))
-
 }
 
 func RemoveDuplicateInt(intSlice []uint32) []uint32 {
